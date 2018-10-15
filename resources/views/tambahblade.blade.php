@@ -1,0 +1,3 @@
+{{$hasil}}
+
+{{$hasilarray['nama']}}
