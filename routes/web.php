@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/halo', function (){
+  echo "Hello World";
+});
+
+Route::get('/halojuga', function (){
+  return view('hallo');
+});
+
+Route::get('/haloreturn', function (){
+  return "Hello World Return";
+});
