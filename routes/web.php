@@ -41,7 +41,7 @@ Route::get('addblade/{a}/{b}', function($a,$b){
   return view('tambahblade')->with('hasil',$hasil);
 });
 
-Route::get('addarray/{a}/{b}', function($a,$b){
+Route::get('addarray/{a?}/{b?}', function($a=20,$b=20){
   $hasilarray = ['nama'=>'Bia'];
   $hasil = $a + $b;
   return view('tambah', compact('hasilarray',$hasilarray))->with('hasil',$hasil);
@@ -52,3 +52,6 @@ Route::get('addarrayblade/{a}/{b}', function($a,$b){
   $hasil = $a + $b;
   return view('tambahblade', compact('hasilarray',$hasilarray))->with('hasil',$hasil);
 });
+
+Route::get('about','AboutController@tampil');
+Route::get('about-view','AboutController@tampil_view');
