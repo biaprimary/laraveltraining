@@ -8,8 +8,8 @@ use App\Http\Controllers\Controller;
 class ShowProfile extends Controller
 {
     //
-    function __invoke(){
-      return "Ini Contoh Single Action Controller";
+    function __invoke($nama){
+      return "Ini Contoh Single Action Controller, nama profile : ".$nama;
     }
 
 }

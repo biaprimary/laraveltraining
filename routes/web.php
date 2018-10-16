@@ -57,4 +57,10 @@ Route::get('about','AboutController@tampil');
 Route::get('about-view','AboutController@tampil_view');
 Route::get('user/{id}','User\UsersController@show');
 Route::get('usertampilnama/{nama}','User\UsersController@tampilNama');
-Route::get('show-profile','User\ShowProfile'); //contoh single action controller
+Route::get('show-profile/{nama}','User\ShowProfile'); //contoh single action controller
+
+Route::get('photoindex','PhotoController@index');
+Route::get('photocreate','PhotoController@create');
+Route::get('photostore','PhotoController@store');
+
+Route::resource('photo','PhotoController');
