@@ -55,3 +55,4 @@ Route::get('addarrayblade/{a}/{b}', function($a,$b){
 
 Route::get('about','AboutController@tampil');
 Route::get('about-view','AboutController@tampil_view');
+Route::get('user/{id}','User\UsersController@show');
