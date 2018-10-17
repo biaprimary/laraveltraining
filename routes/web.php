@@ -63,4 +63,9 @@ Route::get('photoindex','PhotoController@index');
 Route::get('photocreate','PhotoController@create');
 Route::get('photostore','PhotoController@store');
 
-Route::resource('photo','PhotoController');
+Route::resource('photo','PhotoController',['names'=>['create'=>'tampilform'],'only'=>['index','show','create']]);
+Route::resource('foto','PhotoController');
+Route::get('tentang','AboutController@tampil_view2');
+Route::get('bebas','PhotoController@bebas');
+
+Route::resource('registrasi','User\RegistrasiController');

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class PhotoController extends Controller
+class RegistrasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class PhotoController extends Controller
     public function index()
     {
         //
-        return "ini index";
+
     }
 
     /**
@@ -25,7 +26,7 @@ class PhotoController extends Controller
     public function create()
     {
         //
-        return "ini create";
+        return view('registrasi');
     }
 
     /**
@@ -37,8 +38,22 @@ class PhotoController extends Controller
     public function store(Request $request)
     {
         //
-        return "ini store";
+        /*$username = $request->input('username');
+        $password = $request->input('password');
+        $nama = $request->input('nama');
+        $umur = $request->input('umur');
+        return $username . $password . $nama . $umur;*/
+
+        $data = $request->all();
+        $url = $request->url();
+        //$fullurl = $request->fullUrl();
+        //return $url;
+        //return $data;
+        //return redirect('registrasi/create')->withInput();
+        return redirect('registrasi/create')->withInput($request->except('umur'));
+        //return redirect()->route('registrasi.create');
     }
+
 
     /**
      * Display the specified resource.
@@ -49,7 +64,7 @@ class PhotoController extends Controller
     public function show($id)
     {
         //
-        return "ini show";
+
     }
 
     /**
@@ -61,7 +76,6 @@ class PhotoController extends Controller
     public function edit($id)
     {
         //
-        return "ini edit";
     }
 
     /**
@@ -74,7 +88,6 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return "ini update";
     }
 
     /**
@@ -86,12 +99,5 @@ class PhotoController extends Controller
     public function destroy($id)
     {
         //
-        return "ini destroy";
     }
-
-    public function bebas()
-    {
-      return "ini bebas";
-    }
-
 }

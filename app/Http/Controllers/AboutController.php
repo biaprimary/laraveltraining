@@ -14,4 +14,8 @@ class AboutController extends Controller
     function tampil_view(){
       return view('about');
     }
+
+    function tampil_view2(){
+      return view('tentang');
+    }
 }
