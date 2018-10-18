@@ -69,3 +69,18 @@ Route::get('tentang','AboutController@tampil_view2');
 Route::get('bebas','PhotoController@bebas');
 
 Route::resource('registrasi','User\RegistrasiController');
+
+Route::get('tampilsiswa','SiswaController@tampil_siswa')->name('tampil-siswa');
+Route::post('insertsiswa','SiswaController@insert_siswa')->name('insert-siswa');
+Route::get('formsiswa','SiswaController@form_siswa')->name('form-siswa');
+Route::get('editsiswa/{id}','SiswaController@edit_siswa')->name('edit-siswa');
+Route::put('updatesiswa/{id}','SiswaController@update_siswa')->name('update-siswa');
+Route::delete('hapussiswa/{id}','SiswaController@hapus_siswa')->name('hapus-siswa');
+
+
+Route::get('tampilsiswaqbuilder','Siswa1Controller@tampil_siswa')->name('tampilsiswaqbuilder');
+Route::post('insertsiswaqbuilder','Siswa1Controller@insert_siswa')->name('insertsiswaqbuilder');
+Route::put('updatesiswaqbuilder/{id}','Siswa1Controller@update_siswa')->name('updatesiswaqbuilder');
+Route::delete('hapussiswaqbuilder/{id}','Siswa1Controller@hapus_siswa')->name('hapussiswaqbuilder');
+
+Route::resource('siswa2','Siswa2Controller');
